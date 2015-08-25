@@ -1,12 +1,18 @@
-<h1>Rito Plz</h1>
+<section class="main-content">
+  <h1>Rito Plz</h1>
 
-<%= form_for @request do |f| %>
-  <%= f.label :content %>
-  <%= f.text_field :content %>
+  <div class="request-form">
+  <%= form_for @request do |f| %>
+    <%= f.label :content %>
+    <%= f.text_field :content %>
 
-  <%= f.submit "Rito Plz" %>
-<% end %>
+    <%= f.submit "Rito Plz" %>
+  <% end %>
+  </div>
 
-<% @requests.each do |request| %>
-  <p><%= request.content %>
-<% end %>
+  <div class="requests-list">
+    <% @requests.each do |request| %>
+      <p><%= request.content %>
+    <% end %>
+  </div>
+</section>
