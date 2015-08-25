@@ -1,0 +1,12 @@
+<h1>Rito Plz</h1>
+
+<%= form_for @request do |f| %>
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+
+  <%= f.submit "Rito Plz" %>
+<% end %>
+
+<% @requests.each do |request| %>
+  <p><%= request.content %>
+<% end %>
